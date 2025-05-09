@@ -21,12 +21,7 @@
     color: #000;
 }
 
-.address__phone {
-    text-decoration: none;
-    border-bottom: 1px solid #000;
-}
-
-.address__email {
+.address__link {
     text-decoration: none;
     border-bottom: 1px solid #000;
 }
@@ -44,7 +39,7 @@
     font-size: 22px;
     text-transform: uppercase;
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid currentColor;
     background: transparent;
     cursor: pointer;
 }
@@ -84,32 +79,9 @@
     text-decoration: none;
 }
 
-.card_type_film {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -2;
-    background-image: url('./../images/card-lot-01.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
-.card_type_book {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -2;
-    background-image: url('./../images/card-lot-02.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
+.card_type_book,
+.card_type_film,
 .card_type_picture {
     position: absolute;
     top: 0;
@@ -117,10 +89,21 @@
     left: 0;
     right: 0;
     z-index: -2;
-    background-image: url('./../images/card-lot-03.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.card_type_film {
+    background-image: url('./../images/card-lot-01.jpg');
+}
+
+.card_type_book {
+    background-image: url('./../images/card-lot-02.jpg');
+}
+
+.card_type_picture {
+    background-image: url('./../images/card-lot-03.jpg');
 }
 
 /* header */
@@ -252,22 +235,21 @@
     margin-top: 27px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 25px;
 }
 
 .lots__card-list-item {
     list-style: none;
 }
 
-.lots__link-wrapper {
-    margin-top: 30px;
-}
-
 .lots__look-more-link {
+    margin-top: 30px;
+    margin-left: 40px;
     font-weight: 400;
     font-size: 20px;
     color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #000;
+    text-decoration: underline;  
 }
 
 /* about */
